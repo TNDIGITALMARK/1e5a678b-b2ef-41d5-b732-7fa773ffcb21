@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "GlamPass - Planos de Beleza por Assinatura",
+  description: "Conectando você aos melhores salões com planos de assinatura convenientes. Manicure, pedicure, escova e muito mais!",
 };
 
 export default function RootLayout({
