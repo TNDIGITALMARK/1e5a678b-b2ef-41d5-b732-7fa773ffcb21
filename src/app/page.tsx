@@ -66,10 +66,10 @@ export default function Home() {
               GlamPass
             </Link>
             <div className="hidden md:flex items-center gap-8">
-              <Link href="/" className="hover:text-primary transition-colors">
+              <Link href="/about" className="hover:text-primary transition-colors">
                 Quem Somos
               </Link>
-              <Link href="#plans" className="hover:text-primary transition-colors">
+              <Link href="/#plans" className="hover:text-primary transition-colors">
                 Planos
               </Link>
               <Link href="/locations" className="hover:text-primary transition-colors">
@@ -78,7 +78,7 @@ export default function Home() {
               <Link href="/bookings" className="hover:text-primary transition-colors">
                 Agendamentos
               </Link>
-              <Link href="#reviews" className="hover:text-primary transition-colors">
+              <Link href="/#reviews" className="hover:text-primary transition-colors">
                 Avaliações
               </Link>
             </div>
@@ -93,10 +93,10 @@ export default function Home() {
             {/* Text Content */}
             <div className="text-white z-10">
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                SUBSCRIBE TO UNCOMPROMISING BEAUTY
+                Planos Exclusivos para Você Brilhar Mais
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-purple-100">
-                Planos Exclusivos para Você Brilhar Mais
+                Beleza sem complicação, qualidade garantida
               </p>
               <Button
                 className="bg-white text-purple-600 hover:bg-purple-50 shadow-lg hover:shadow-xl transition-all"
@@ -124,18 +124,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
-          <h2 className="text-4xl font-bold mb-6 text-primary">Quem Somos</h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Fundada em 2023, a <span className="font-logo text-2xl text-purple">GlamPass</span> revoluciona
-            o cuidado com a beleza conectando mulheres ocupadas com salões de confiança locais através
-            de planos de assinatura convenientes. Nossa missão é eliminar a preocupação com agendamentos
-            individuais, garantindo cuidados consistentes com a beleza a custos previsíveis.
-          </p>
-        </div>
-      </section>
 
       {/* Plans Section */}
       <section id="plans" className="py-20 bg-gradient-to-b from-secondary/30 to-white">
@@ -265,8 +253,8 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Links Rápidos</h4>
               <ul className="space-y-2 text-white/80 text-sm">
-                <li><Link href="/" className="hover:text-purple-light transition-colors">Quem Somos</Link></li>
-                <li><Link href="#plans" className="hover:text-purple-light transition-colors">Planos</Link></li>
+                <li><Link href="/about" className="hover:text-purple-light transition-colors">Quem Somos</Link></li>
+                <li><Link href="/#plans" className="hover:text-purple-light transition-colors">Planos</Link></li>
                 <li><Link href="/locations" className="hover:text-purple-light transition-colors">Localização</Link></li>
                 <li><Link href="/bookings" className="hover:text-purple-light transition-colors">Agendamentos</Link></li>
               </ul>
