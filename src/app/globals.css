@@ -1,83 +1,89 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* GlamPass Design System - Pixel-Perfect Replication
-   Extracted from design reference: ai-generated-preview.png
+/* GlamPass Design System - Modern Purple Aesthetic
+   Clean, dynamic, modern & elegant salon design
 
    PRIMARY COLORS:
-   - Purple: #533B7A (265, 35%, 36%) - Deep purple for cards and primary elements
-   - Light Purple: #B4A5D1 (260, 35%, 74%) - Soft purple gradient background
-   - Gold: #D4A855 (42, 62%, 58%) - Gold for CTAs and highlights
-   - Star Gold: #F5C842 (46, 90%, 62%) - Golden stars for ratings
+   - Deep Purple: #6B46C1 (263, 46%, 52%) - Main brand color
+   - Medium Purple: #8B5CF6 (258, 90%, 66%) - Interactive elements
+   - Light Purple: #C4B5FD (251, 91%, 84%) - Backgrounds and accents
+   - Accent Purple: #9333EA (280, 83%, 55%) - Highlights and CTAs
+   - Dark Purple: #4C1D95 (265, 68%, 35%) - Headers and emphasis
    - White: #FFFFFF - White content areas
-   - Dark Text: #2D2D2D (0, 0%, 18%) - Dark gray for body text
+   - Dark Text: #1F2937 (220, 13%, 18%) - Rich black for text
 
    TYPOGRAPHY:
    - Logo Font: 'Great Vibes' (elegant script/cursive)
    - Body Font: 'Poppins' (modern sans-serif)
 
    SPACING & LAYOUT:
-   - Border radius: 12px for cards, 8px for buttons/images
-   - Shadows: 0 4px 12px rgba(0,0,0,0.1)
-   - Generous padding: 24-32px
-   - Card gaps: 16-24px
+   - Border radius: 16px for cards, 8px for buttons/images
+   - Shadows: Modern depth with purple tints
+   - Clean padding: 24-40px
+   - Generous white space for modern look
 */
 
 :root {
-  /* GlamPass Purple Color System */
-  --background: 260 35% 74%; /* Light purple background */
-  --foreground: 0 0% 18%; /* Dark text */
+  /* GlamPass Modern Purple Color System */
+  --background: 251 91% 95%; /* Very light purple background */
+  --foreground: 220 13% 18%; /* Rich dark text */
 
   /* Cards: White background with dark text */
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 18%;
+  --card-foreground: 220 13% 18%;
 
   /* Popovers with white background */
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 18%;
+  --popover-foreground: 220 13% 18%;
 
-  /* Primary: Deep purple with white text */
-  --primary: 265 35% 36%; /* #533B7A */
+  /* Primary: Deep vibrant purple */
+  --primary: 263 46% 52%; /* #6B46C1 - Deep Purple */
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Light purple */
-  --secondary: 260 35% 74%; /* #B4A5D1 */
-  --secondary-foreground: 0 0% 18%;
+  /* Secondary: Medium purple for variety */
+  --secondary: 258 90% 66%; /* #8B5CF6 - Medium Purple */
+  --secondary-foreground: 0 0% 100%;
 
-  /* Muted: Subtle purple with darker text */
-  --muted: 260 20% 88%;
-  --muted-foreground: 0 0% 40%;
+  /* Muted: Light purple backgrounds */
+  --muted: 251 91% 84%; /* #C4B5FD - Light Purple */
+  --muted-foreground: 220 13% 35%;
 
-  /* Accent: Gold for highlights and CTAs */
-  --accent: 42 62% 58%; /* #D4A855 */
+  /* Accent: Bright purple for CTAs and highlights */
+  --accent: 280 83% 55%; /* #9333EA - Accent Purple */
   --accent-foreground: 0 0% 100%;
 
-  /* Gold for buttons and highlights */
-  --gold: 42 62% 58%; /* #D4A855 */
+  /* Purple variations for design */
+  --purple-deep: 265 68% 35%; /* #4C1D95 - Dark Purple */
+  --purple-medium: 258 90% 66%; /* #8B5CF6 */
+  --purple-light: 251 91% 84%; /* #C4B5FD */
+  --purple-accent: 280 83% 55%; /* #9333EA */
+
+  /* Keep gold only for stars in reviews */
   --gold-star: 46 90% 62%; /* #F5C842 */
 
   /* Destructive: Red for errors */
   --destructive: 0 70% 50%;
   --destructive-foreground: 0 0% 100%;
 
-  /* Borders: Subtle gray */
-  --border: 0 0% 88%;
-  --input: 0 0% 90%;
-  --ring: 265 35% 36%; /* Purple ring */
+  /* Borders: Light purple tint */
+  --border: 251 50% 88%;
+  --input: 251 50% 92%;
+  --ring: 263 46% 52%; /* Purple ring */
 
-  /* Border radius matching design reference */
-  --radius: 0.75rem; /* 12px for cards */
+  /* Border radius - modern and clean */
+  --radius: 1rem; /* 16px for cards */
   --radius-button: 0.5rem; /* 8px for buttons */
 
   /* Sidebar */
   --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 0 0% 18%;
-  --sidebar-primary: 265 35% 36%;
+  --sidebar-foreground: 220 13% 18%;
+  --sidebar-primary: 263 46% 52%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 260 35% 74%;
-  --sidebar-accent-foreground: 0 0% 18%;
-  --sidebar-border: 0 0% 88%;
-  --sidebar-ring: 265 35% 36%;
+  --sidebar-accent: 251 91% 84%;
+  --sidebar-accent-foreground: 220 13% 18%;
+  --sidebar-border: 251 50% 88%;
+  --sidebar-ring: 263 46% 52%;
 
   /* Font families */
   --font-logo: 'Great Vibes', cursive;
@@ -164,8 +170,11 @@
   --color-sidebar-border: hsl(var(--sidebar-border));
   --color-sidebar-ring: hsl(var(--sidebar-ring));
 
-  /* GlamPass Colors */
-  --color-gold: hsl(var(--gold));
+  /* GlamPass Purple Colors */
+  --color-purple-deep: hsl(var(--purple-deep));
+  --color-purple-medium: hsl(var(--purple-medium));
+  --color-purple-light: hsl(var(--purple-light));
+  --color-purple-accent: hsl(var(--purple-accent));
   --color-gold-star: hsl(var(--gold-star));
 
   /* Border Radius */
@@ -317,26 +326,26 @@ input, select, textarea {
   line-height: 1.5;
 }
 
-/* GlamPass-specific shadows matching design reference */
+/* GlamPass-specific modern shadows with purple tints */
 .shadow-sm {
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px 0 rgba(107, 70, 193, 0.08);
 }
 
 .shadow {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px 0 rgba(107, 70, 193, 0.12);
 }
 
 .shadow-md {
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px 0 rgba(107, 70, 193, 0.15);
 }
 
 .shadow-lg {
-  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 30px 0 rgba(107, 70, 193, 0.2);
 }
 
-/* Gold glow effect for buttons and highlights */
-.shadow-gold {
-  box-shadow: 0 4px 12px 0 rgba(212, 168, 85, 0.3);
+/* Purple glow effect for buttons and highlights */
+.shadow-purple {
+  box-shadow: 0 4px 20px 0 rgba(147, 51, 234, 0.4);
 }
 
 /* Logo font utility */
@@ -344,11 +353,20 @@ input, select, textarea {
   font-family: var(--font-logo);
 }
 
-/* Gold text utilities */
-.text-gold {
-  color: hsl(var(--gold));
+/* Purple text utilities */
+.text-purple {
+  color: hsl(var(--purple-medium));
 }
 
+.text-purple-deep {
+  color: hsl(var(--purple-deep));
+}
+
+.text-purple-accent {
+  color: hsl(var(--purple-accent));
+}
+
+/* Keep gold only for stars */
 .text-gold-star {
   color: hsl(var(--gold-star));
 }
@@ -358,15 +376,27 @@ input, select, textarea {
 }
 
 /* Background utilities */
-.bg-gold {
-  background-color: hsl(var(--gold));
+.bg-purple {
+  background-color: hsl(var(--purple-medium));
+}
+
+.bg-purple-light {
+  background-color: hsl(var(--purple-light));
+}
+
+.bg-purple-accent {
+  background-color: hsl(var(--purple-accent));
 }
 
 /* Border utilities */
-.border-gold {
-  border-color: hsl(var(--gold));
+.border-purple {
+  border-color: hsl(var(--purple-medium));
+}
+
+.border-purple-light {
+  border-color: hsl(var(--purple-light));
 }
 
 .border-purple-200 {
-  border-color: hsl(265, 35%, 85%);
+  border-color: hsl(251, 91%, 84%);
 }

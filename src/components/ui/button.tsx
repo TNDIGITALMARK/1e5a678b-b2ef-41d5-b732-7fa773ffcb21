@@ -18,7 +18,7 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-md",
         ghost: "hover:bg-accent hover:text-accent-foreground rounded-md",
         link: "text-primary underline-offset-4 hover:underline",
-        gold: "bg-[hsl(var(--gold))] text-white shadow-gold hover:shadow-lg hover:scale-105 rounded-[var(--radius-button)] font-semibold",
+        purple: "bg-[hsl(var(--purple-accent))] text-white shadow-purple hover:shadow-lg hover:scale-105 rounded-[var(--radius-button)] font-semibold",
       },
       size: {
         default: "h-10 px-4 py-2",

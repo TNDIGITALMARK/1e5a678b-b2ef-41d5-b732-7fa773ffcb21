@@ -62,7 +62,7 @@ export default function Home() {
       <nav className="bg-white shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="font-logo text-4xl text-gold">
+            <Link href="/" className="font-logo text-4xl text-purple">
               GlamPass
             </Link>
             <div className="hidden md:flex items-center gap-8">
@@ -81,38 +81,46 @@ export default function Home() {
               <Link href="#reviews" className="hover:text-primary transition-colors">
                 Avaliações
               </Link>
-              <div className="flex items-center gap-2 text-gold font-semibold">
-                <Phone className="h-4 w-4" />
-                <span>0800-GLAM-PASS</span>
-              </div>
             </div>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section
-        className="relative h-[600px] flex items-center justify-center text-white"
-        style={{
-          backgroundImage: 'url(/generated/hero-beauty-treatment.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 text-center px-6 max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-            SUBSCRIBE TO UNCOMPRMAISNG BEAUTY
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 drop-shadow-md">
-            Planos Exclusivos para Você Brilhar Mais
-          </p>
-          <Button variant="gold" size="lg" asChild>
-            <Link href="#plans">
-              <Sparkles className="h-5 w-5" />
-              Ver Planos
-            </Link>
-          </Button>
+      {/* Hero Section - Modern Purple Design */}
+      <section className="relative h-[600px] flex items-center bg-gradient-to-br from-purple-600 via-purple-500 to-purple-700">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="text-white z-10">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                SUBSCRIBE TO UNCOMPROMISING BEAUTY
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-purple-100">
+                Planos Exclusivos para Você Brilhar Mais
+              </p>
+              <Button
+                className="bg-white text-purple-600 hover:bg-purple-50 shadow-lg hover:shadow-xl transition-all"
+                size="lg"
+                asChild
+              >
+                <Link href="#plans">
+                  <Sparkles className="h-5 w-5" />
+                  Ver Planos
+                </Link>
+              </Button>
+            </div>
+
+            {/* Salon Image */}
+            <div className="hidden md:block">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/generated/salon-woman-styling.jpg"
+                  alt="Professional hair styling at GlamPass salon"
+                  className="w-full h-[500px] object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -121,7 +129,7 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6 text-primary">Quem Somos</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Fundada em 2023, a <span className="font-logo text-2xl text-gold">GlamPass</span> revoluciona
+            Fundada em 2023, a <span className="font-logo text-2xl text-purple">GlamPass</span> revoluciona
             o cuidado com a beleza conectando mulheres ocupadas com salões de confiança locais através
             de planos de assinatura convenientes. Nossa missão é eliminar a preocupação com agendamentos
             individuais, garantindo cuidados consistentes com a beleza a custos previsíveis.
@@ -142,12 +150,12 @@ export default function Home() {
                 key={plan.name}
                 className={`relative overflow-hidden ${
                   plan.featured
-                    ? 'border-gold border-2 shadow-gold scale-105'
+                    ? 'border-purple border-2 shadow-purple scale-105'
                     : 'border-gray-200'
                 }`}
               >
                 {plan.featured && (
-                  <div className="absolute top-0 right-0 bg-gold text-white px-4 py-1 text-sm font-semibold">
+                  <div className="absolute top-0 right-0 bg-purple-accent text-white px-4 py-1 text-sm font-semibold">
                     Mais Popular
                   </div>
                 )}
@@ -155,7 +163,7 @@ export default function Home() {
                   <CardTitle className="text-3xl font-bold text-white mb-2">
                     {plan.name}
                   </CardTitle>
-                  <div className="text-5xl font-bold text-gold">
+                  <div className="text-5xl font-bold text-purple-light">
                     {plan.price}
                   </div>
                   <p className="text-sm text-white/80 mt-2">por mês</p>
@@ -164,14 +172,18 @@ export default function Home() {
                   <ul className="space-y-4">
                     {plan.services.map((service, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <Sparkles className="h-5 w-5 text-gold flex-shrink-0 mt-0.5" />
+                        <Sparkles className="h-5 w-5 text-purple flex-shrink-0 mt-0.5" />
                         <span className="text-gray-700">{service}</span>
                       </li>
                     ))}
                   </ul>
                 </CardContent>
                 <CardFooter className="pb-8">
-                  <Button variant="gold" className="w-full" size="lg" asChild>
+                  <Button
+                    className="w-full bg-purple-accent hover:bg-purple-600 text-white"
+                    size="lg"
+                    asChild
+                  >
                     <Link href={`/payment?plan=${plan.name.toLowerCase()}`}>
                       Assinar
                     </Link>
@@ -218,14 +230,14 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary/80 text-white">
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-purple-500 text-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Pronta para Transformar sua Rotina de Beleza?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Junte-se a milhares de mulheres que já descobriram a conveniência e qualidade da GlamPass
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button variant="gold" size="lg" asChild>
+            <Button className="bg-white text-purple-600 hover:bg-purple-50" size="lg" asChild>
               <Link href="#plans">
                 Escolher Plano
               </Link>
@@ -245,7 +257,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-logo text-3xl text-gold mb-4">GlamPass</h3>
+              <h3 className="font-logo text-3xl text-purple-light mb-4">GlamPass</h3>
               <p className="text-white/80 text-sm">
                 Beleza sem complicação, qualidade garantida.
               </p>
@@ -253,19 +265,15 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Links Rápidos</h4>
               <ul className="space-y-2 text-white/80 text-sm">
-                <li><Link href="/" className="hover:text-gold transition-colors">Quem Somos</Link></li>
-                <li><Link href="#plans" className="hover:text-gold transition-colors">Planos</Link></li>
-                <li><Link href="/locations" className="hover:text-gold transition-colors">Localização</Link></li>
-                <li><Link href="/bookings" className="hover:text-gold transition-colors">Agendamentos</Link></li>
+                <li><Link href="/" className="hover:text-purple-light transition-colors">Quem Somos</Link></li>
+                <li><Link href="#plans" className="hover:text-purple-light transition-colors">Planos</Link></li>
+                <li><Link href="/locations" className="hover:text-purple-light transition-colors">Localização</Link></li>
+                <li><Link href="/bookings" className="hover:text-purple-light transition-colors">Agendamentos</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Contato</h4>
               <ul className="space-y-2 text-white/80 text-sm">
-                <li className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  <span>0800-GLAM-PASS</span>
-                </li>
                 <li>SAC: (11) 1234-5678</li>
                 <li>contato@glampass.com.br</li>
               </ul>
@@ -273,8 +281,8 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Redes Sociais</h4>
               <div className="flex gap-4">
-                <a href="#" className="hover:text-gold transition-colors">Instagram</a>
-                <a href="#" className="hover:text-gold transition-colors">Facebook</a>
+                <a href="#" className="hover:text-purple-light transition-colors">Instagram</a>
+                <a href="#" className="hover:text-purple-light transition-colors">Facebook</a>
               </div>
             </div>
           </div>

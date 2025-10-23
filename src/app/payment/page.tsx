@@ -68,7 +68,7 @@ export default function Payment() {
               Você receberá um e-mail com os detalhes da sua assinatura e instruções para começar a usar os serviços.
             </p>
             <div className="pt-4 space-y-3">
-              <Button variant="gold" className="w-full" size="lg" asChild>
+              <Button className="bg-purple-accent hover:bg-purple-600 text-white" className="w-full" size="lg" asChild>
                 <Link href="/bookings">Agendar Primeiro Serviço</Link>
               </Button>
               <Button variant="outline" className="w-full" asChild>
@@ -87,13 +87,9 @@ export default function Payment() {
       <nav className="bg-white shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="font-logo text-4xl text-gold">
+            <Link href="/" className="font-logo text-4xl text-purple">
               GlamPass
             </Link>
-            <div className="flex items-center gap-2 text-gold font-semibold">
-              <Phone className="h-4 w-4" />
-              <span>0800-GLAM-PASS</span>
-            </div>
           </div>
         </div>
       </nav>
@@ -136,7 +132,7 @@ export default function Payment() {
                   <div className="border-t pt-4">
                     <div className="flex justify-between items-center text-lg">
                       <span className="font-bold">Total:</span>
-                      <span className="font-bold text-gold text-2xl">
+                      <span className="font-bold text-purple text-2xl">
                         {selectedPlan.price}
                       </span>
                     </div>
@@ -158,8 +154,8 @@ export default function Payment() {
                       onClick={() => setPaymentMethod('credit')}
                       className={`p-4 border-2 rounded-[var(--radius)] flex flex-col items-center gap-2 transition-all ${
                         paymentMethod === 'credit'
-                          ? 'border-gold bg-gold/5'
-                          : 'border-gray-200 hover:border-gold/50'
+                          ? 'border-purple bg-purple-accent/5'
+                          : 'border-gray-200 hover:border-purple/50'
                       }`}
                     >
                       <CreditCard className="h-8 w-8 text-primary" />
@@ -171,8 +167,8 @@ export default function Payment() {
                       onClick={() => setPaymentMethod('debit')}
                       className={`p-4 border-2 rounded-[var(--radius)] flex flex-col items-center gap-2 transition-all ${
                         paymentMethod === 'debit'
-                          ? 'border-gold bg-gold/5'
-                          : 'border-gray-200 hover:border-gold/50'
+                          ? 'border-purple bg-purple-accent/5'
+                          : 'border-gray-200 hover:border-purple/50'
                       }`}
                     >
                       <CreditCard className="h-8 w-8 text-primary" />
@@ -184,8 +180,8 @@ export default function Payment() {
                       onClick={() => setPaymentMethod('pix')}
                       className={`p-4 border-2 rounded-[var(--radius)] flex flex-col items-center gap-2 transition-all ${
                         paymentMethod === 'pix'
-                          ? 'border-gold bg-gold/5'
-                          : 'border-gray-200 hover:border-gold/50'
+                          ? 'border-purple bg-purple-accent/5'
+                          : 'border-gray-200 hover:border-purple/50'
                       }`}
                     >
                       <Smartphone className="h-8 w-8 text-primary" />
@@ -197,8 +193,8 @@ export default function Payment() {
                       onClick={() => setPaymentMethod('boleto')}
                       className={`p-4 border-2 rounded-[var(--radius)] flex flex-col items-center gap-2 transition-all ${
                         paymentMethod === 'boleto'
-                          ? 'border-gold bg-gold/5'
-                          : 'border-gray-200 hover:border-gold/50'
+                          ? 'border-purple bg-purple-accent/5'
+                          : 'border-gray-200 hover:border-purple/50'
                       }`}
                     >
                       <Barcode className="h-8 w-8 text-primary" />
@@ -379,7 +375,7 @@ export default function Payment() {
                     <Link href="/">Cancelar</Link>
                   </Button>
                   <Button
-                    variant="gold"
+                    className="bg-purple-accent hover:bg-purple-600 text-white"
                     size="lg"
                     className="flex-1"
                     onClick={handlePayment}
@@ -398,7 +394,7 @@ export default function Payment() {
       <footer className="bg-primary text-white py-12 mt-16">
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <h3 className="font-logo text-3xl text-gold mb-4">GlamPass</h3>
+            <h3 className="font-logo text-3xl text-purple mb-4">GlamPass</h3>
             <p className="text-white/80 text-sm">Beleza sem complicação, qualidade garantida.</p>
           </div>
         </div>

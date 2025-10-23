@@ -93,7 +93,7 @@ export default function Bookings() {
               Você receberá uma confirmação por e-mail com os detalhes do seu agendamento.
             </p>
             <div className="pt-4 space-y-3">
-              <Button variant="gold" className="w-full" size="lg" asChild>
+              <Button className="bg-purple-accent hover:bg-purple-600 text-white" className="w-full" size="lg" asChild>
                 <Link href="/bookings">Fazer Novo Agendamento</Link>
               </Button>
               <Button variant="outline" className="w-full" asChild>
@@ -112,7 +112,7 @@ export default function Bookings() {
       <nav className="bg-white shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="font-logo text-4xl text-gold">
+            <Link href="/" className="font-logo text-4xl text-purple">
               GlamPass
             </Link>
             <div className="hidden md:flex items-center gap-8">
@@ -128,10 +128,6 @@ export default function Bookings() {
               <Link href="/bookings" className="text-primary font-semibold">
                 Agendamentos
               </Link>
-              <div className="flex items-center gap-2 text-gold font-semibold">
-                <Phone className="h-4 w-4" />
-                <span>0800-GLAM-PASS</span>
-              </div>
             </div>
           </div>
         </div>
@@ -169,14 +165,14 @@ export default function Bookings() {
                       onClick={() => setSelectedSalon(salon.id)}
                       className={`p-4 border-2 rounded-[var(--radius)] text-left transition-all ${
                         selectedSalon === salon.id
-                          ? 'border-gold bg-gold/5'
-                          : 'border-gray-200 hover:border-gold/50'
+                          ? 'border-purple bg-purple-accent/5'
+                          : 'border-gray-200 hover:border-purple/50'
                       }`}
                     >
                       <h3 className="font-semibold text-primary mb-1">{salon.name}</h3>
                       <p className="text-xs text-gray-600 mb-2">{salon.address}</p>
                       <div className="flex items-center gap-1">
-                        <Star className="h-4 w-4 fill-gold-star text-gold-star" />
+                        <Star className="h-4 w-4 fill-gold-star text-purple-star" />
                         <span className="text-sm font-semibold">{salon.rating}</span>
                       </div>
                     </button>
@@ -204,8 +200,8 @@ export default function Bookings() {
                         onClick={() => setSelectedService(service.id)}
                         className={`p-4 border-2 rounded-[var(--radius)] text-left transition-all ${
                           selectedService === service.id
-                            ? 'border-gold bg-gold/5'
-                            : 'border-gray-200 hover:border-gold/50'
+                            ? 'border-purple bg-purple-accent/5'
+                            : 'border-gray-200 hover:border-purple/50'
                         }`}
                       >
                         <h3 className="font-semibold text-primary mb-1">
@@ -258,8 +254,8 @@ export default function Bookings() {
                             onClick={() => setSelectedTime(time)}
                             className={`py-2 px-3 border-2 rounded-[var(--radius)] text-sm font-medium transition-all ${
                               selectedTime === time
-                                ? 'border-gold bg-gold text-white'
-                                : 'border-gray-200 hover:border-gold/50'
+                                ? 'border-purple bg-purple-accent text-white'
+                                : 'border-gray-200 hover:border-purple/50'
                             }`}
                           >
                             {time}
@@ -274,8 +270,8 @@ export default function Bookings() {
 
             {/* Confirmation Summary */}
             {selectedSalon && selectedService && selectedDate && selectedTime && (
-              <Card className="border-gold border-2">
-                <CardHeader className="bg-gold/5">
+              <Card className="border-purple border-2">
+                <CardHeader className="bg-purple-accent/5">
                   <CardTitle className="text-primary">Resumo do Agendamento</CardTitle>
                 </CardHeader>
                 <CardContent className="pt-6 space-y-4">
@@ -311,7 +307,7 @@ export default function Bookings() {
                       Cancelar
                     </Button>
                     <Button
-                      variant="gold"
+                      className="bg-purple-accent hover:bg-purple-600 text-white"
                       size="lg"
                       className="flex-1"
                       onClick={handleConfirmBooking}
@@ -331,7 +327,7 @@ export default function Bookings() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-logo text-3xl text-gold mb-4">GlamPass</h3>
+              <h3 className="font-logo text-3xl text-purple-light mb-4">GlamPass</h3>
               <p className="text-white/80 text-sm">
                 Beleza sem complicação, qualidade garantida.
               </p>
@@ -340,22 +336,22 @@ export default function Bookings() {
               <h4 className="font-semibold mb-4">Links Rápidos</h4>
               <ul className="space-y-2 text-white/80 text-sm">
                 <li>
-                  <Link href="/" className="hover:text-gold transition-colors">
+                  <Link href="/" className="hover:text-purple-light transition-colors">
                     Quem Somos
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#plans" className="hover:text-gold transition-colors">
+                  <Link href="/#plans" className="hover:text-purple-light transition-colors">
                     Planos
                   </Link>
                 </li>
                 <li>
-                  <Link href="/locations" className="hover:text-gold transition-colors">
+                  <Link href="/locations" className="hover:text-purple-light transition-colors">
                     Localização
                   </Link>
                 </li>
                 <li>
-                  <Link href="/bookings" className="hover:text-gold transition-colors">
+                  <Link href="/bookings" className="hover:text-purple-light transition-colors">
                     Agendamentos
                   </Link>
                 </li>
@@ -375,10 +371,10 @@ export default function Bookings() {
             <div>
               <h4 className="font-semibold mb-4">Redes Sociais</h4>
               <div className="flex gap-4">
-                <a href="#" className="hover:text-gold transition-colors">
+                <a href="#" className="hover:text-purple-light transition-colors">
                   Instagram
                 </a>
-                <a href="#" className="hover:text-gold transition-colors">
+                <a href="#" className="hover:text-purple-light transition-colors">
                   Facebook
                 </a>
               </div>

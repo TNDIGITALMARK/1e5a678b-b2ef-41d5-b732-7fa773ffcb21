@@ -46,7 +46,7 @@ export default function Locations() {
       <nav className="bg-white shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="font-logo text-4xl text-gold">
+            <Link href="/" className="font-logo text-4xl text-purple">
               GlamPass
             </Link>
             <div className="hidden md:flex items-center gap-8">
@@ -62,10 +62,6 @@ export default function Locations() {
               <Link href="/bookings" className="hover:text-primary transition-colors">
                 Agendamentos
               </Link>
-              <div className="flex items-center gap-2 text-gold font-semibold">
-                <Phone className="h-4 w-4" />
-                <span>0800-GLAM-PASS</span>
-              </div>
             </div>
           </div>
         </div>
@@ -100,7 +96,7 @@ export default function Locations() {
                     className="object-cover"
                   />
                   <div className="absolute top-4 right-4 bg-white/95 px-3 py-1 rounded-full flex items-center gap-1 shadow-md">
-                    <Star className="h-4 w-4 fill-gold-star text-gold-star" />
+                    <Star className="h-4 w-4 fill-gold-star text-purple-star" />
                     <span className="font-semibold text-gray-800">{salon.rating}</span>
                   </div>
                 </div>
@@ -108,7 +104,7 @@ export default function Locations() {
                 <CardHeader>
                   <CardTitle className="text-2xl text-primary">{salon.name}</CardTitle>
                   <div className="flex items-center gap-2 text-gray-600 text-sm mt-2">
-                    <MapPin className="h-4 w-4 text-gold" />
+                    <MapPin className="h-4 w-4 text-purple" />
                     <span>{salon.distance} de você</span>
                   </div>
                   <p className="text-sm text-gray-600 mt-1">{salon.address}</p>
@@ -116,13 +112,13 @@ export default function Locations() {
 
                 <CardContent className="space-y-4">
                   <div className="flex items-center gap-2 text-gray-700">
-                    <Phone className="h-4 w-4 text-gold" />
+                    <Phone className="h-4 w-4 text-purple" />
                     <span className="text-sm">{salon.phone}</span>
                   </div>
 
                   <div>
                     <div className="flex items-center gap-2 mb-3">
-                      <Clock className="h-4 w-4 text-gold" />
+                      <Clock className="h-4 w-4 text-purple" />
                       <span className="font-semibold text-sm text-gray-800">
                         Horários Disponíveis
                       </span>
@@ -146,7 +142,7 @@ export default function Locations() {
                           key={i}
                           className={`h-4 w-4 ${
                             i < Math.floor(salon.rating)
-                              ? 'fill-gold-star text-gold-star'
+                              ? 'fill-gold-star text-purple-star'
                               : 'text-gray-300'
                           }`}
                         />
@@ -162,7 +158,7 @@ export default function Locations() {
                 </CardContent>
 
                 <CardFooter className="pt-0 pb-6">
-                  <Button variant="gold" className="w-full" size="lg" asChild>
+                  <Button className="bg-purple-accent hover:bg-purple-600 text-white" className="w-full" size="lg" asChild>
                     <Link href={`/bookings?salon=${salon.id}`}>Agendar Agora</Link>
                   </Button>
                 </CardFooter>
@@ -197,7 +193,7 @@ export default function Locations() {
           <p className="text-lg mb-8 max-w-2xl mx-auto">
             Assine agora e tenha acesso ilimitado aos melhores salões da sua região
           </p>
-          <Button variant="gold" size="lg" asChild>
+          <Button className="bg-purple-accent hover:bg-purple-600 text-white" size="lg" asChild>
             <Link href="/#plans">Ver Planos</Link>
           </Button>
         </div>
@@ -208,7 +204,7 @@ export default function Locations() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-logo text-3xl text-gold mb-4">GlamPass</h3>
+              <h3 className="font-logo text-3xl text-purple-light mb-4">GlamPass</h3>
               <p className="text-white/80 text-sm">
                 Beleza sem complicação, qualidade garantida.
               </p>
@@ -217,22 +213,22 @@ export default function Locations() {
               <h4 className="font-semibold mb-4">Links Rápidos</h4>
               <ul className="space-y-2 text-white/80 text-sm">
                 <li>
-                  <Link href="/" className="hover:text-gold transition-colors">
+                  <Link href="/" className="hover:text-purple-light transition-colors">
                     Quem Somos
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#plans" className="hover:text-gold transition-colors">
+                  <Link href="/#plans" className="hover:text-purple-light transition-colors">
                     Planos
                   </Link>
                 </li>
                 <li>
-                  <Link href="/locations" className="hover:text-gold transition-colors">
+                  <Link href="/locations" className="hover:text-purple-light transition-colors">
                     Localização
                   </Link>
                 </li>
                 <li>
-                  <Link href="/bookings" className="hover:text-gold transition-colors">
+                  <Link href="/bookings" className="hover:text-purple-light transition-colors">
                     Agendamentos
                   </Link>
                 </li>
@@ -241,10 +237,6 @@ export default function Locations() {
             <div>
               <h4 className="font-semibold mb-4">Contato</h4>
               <ul className="space-y-2 text-white/80 text-sm">
-                <li className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  <span>0800-GLAM-PASS</span>
-                </li>
                 <li>SAC: (11) 1234-5678</li>
                 <li>contato@glampass.com.br</li>
               </ul>
@@ -252,10 +244,10 @@ export default function Locations() {
             <div>
               <h4 className="font-semibold mb-4">Redes Sociais</h4>
               <div className="flex gap-4">
-                <a href="#" className="hover:text-gold transition-colors">
+                <a href="#" className="hover:text-purple-light transition-colors">
                   Instagram
                 </a>
-                <a href="#" className="hover:text-gold transition-colors">
+                <a href="#" className="hover:text-purple-light transition-colors">
                   Facebook
                 </a>
               </div>
